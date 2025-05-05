@@ -1,0 +1,6 @@
+<component name="ArtifactManager">
+  <artifact type="war" build-on-make="true" name="Session01">
+    <output-path>$PROJECT_DIR$/out/artifacts/Session01</output-path>
+    <root id="archive" name="Session01.war" />
+  </artifact>
+</component>
