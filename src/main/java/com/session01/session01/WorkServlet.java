@@ -29,8 +29,10 @@ public class WorkServlet extends HttpServlet {
     private void addWork(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         String workName = request.getParameter("workName");
 
-        Work work = new Work(workName);
-        workList.add(work);
+        if(!workName.isEmpty()) {
+            Work work = new Work(workName);
+            workList.add(work);
+        }
 
         request.setAttribute("workList", workList);
         request.getRequestDispatcher("todoList.jsp").forward(request, response);
